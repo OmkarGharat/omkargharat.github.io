@@ -1,7 +1,7 @@
 site_name: My Docs
 docs_dir: docs
 copyright: Copyright &copy; 2026 User
-site_url: https://omkargharat.github.io/my-notes
+site_url: https://omkargharat.github.io
 theme:
   name: material
   language: en
