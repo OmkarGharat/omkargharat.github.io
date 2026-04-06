@@ -4,11 +4,18 @@
   --md-header-height: 6.5rem; 
 }
 
-/* Fixes both sidebars sliding behind the header */
-.md-sidebar {
-  top: var(--md-header-height) !important;
-  height: calc(100vh - var(--md-header-height)) !important;
-  position: sticky !important;
+/* Fixes both sidebars sliding behind the header — DESKTOP ONLY */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar {
+    top: var(--md-header-height) !important;
+    height: calc(100vh - var(--md-header-height)) !important;
+    position: sticky !important;
+  }
+}
+
+/* Prevent horizontal overflow on small screens */
+html, body {
+  overflow-x: hidden;
 }
 
 /* Add breathing room to the main content */
