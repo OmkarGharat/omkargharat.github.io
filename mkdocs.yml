@@ -43,6 +43,8 @@ theme:
     - content.code.copy
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/focus-mode.js
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
