@@ -1,7 +1,7 @@
 /* --- 0. LAYOUT & HEADER FIXES --- */
 :root {
   /* Set to 6.5rem to clear both title and tab bars */
-  --md-header-height: 6.5rem; 
+  --md-header-height: 6.5rem;
 }
 
 /* Fixes both sidebars sliding behind the header — DESKTOP ONLY */
@@ -14,7 +14,8 @@
 }
 
 /* Prevent horizontal overflow on small screens */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -24,7 +25,10 @@ html, body {
 }
 
 /* --- 1. TYPOGRAPHY & COLORS --- */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--md-primary-fg-color) !important;
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -36,10 +40,16 @@ h1, h2, h3, h4 {
 }
 
 /* --- 2. HEADER & SEARCH --- */
-.md-header { height: 3.5rem; }
-.md-header__inner { padding-top: 0.4rem; }
+.md-header {
+  height: 3.5rem;
+}
 
-.md-search__input, .md-search__form {
+.md-header__inner {
+  padding-top: 0.4rem;
+}
+
+.md-search__input,
+.md-search__form {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border-radius: 20px !important;
   transition: all 0.3s ease;
@@ -55,7 +65,8 @@ h1, h2, h3, h4 {
 }
 
 /* Removes those vertical lines and folder indentations */
-.md-nav__list, .md-nav__item {
+.md-nav__list,
+.md-nav__item {
   border-left: none !important;
   margin-left: 0 !important;
   padding-left: 0 !important;
@@ -76,7 +87,8 @@ h1, h2, h3, h4 {
 }
 
 /* Sidebar Title styling (e.g. 'Projects' or 'Table of Contents') */
-.md-nav__title, .md-sidebar--secondary .md-nav__title {
+.md-nav__title,
+.md-sidebar--secondary .md-nav__title {
   font-size: 0.8rem !important;
   font-weight: 700 !important;
   margin-bottom: 0.8rem !important;
@@ -96,19 +108,45 @@ h1, h2, h3, h4 {
   max-width: 45%;
 }
 
-.md-footer__link--next { border-left: 3px solid var(--md-accent-fg-color); float: right; }
-.md-footer__link--prev { border-right: 3px solid var(--md-accent-fg-color); float: left; }
+.md-footer__link--next {
+  border-left: 3px solid var(--md-accent-fg-color);
+  float: right;
+}
 
-.md-footer-nav__direction { font-size: 0.55rem; }
-.md-footer-nav__title { font-size: 0.75rem; color: var(--md-accent-fg-color) !important; font-weight: 700; }
+.md-footer__link--prev {
+  border-right: 3px solid var(--md-accent-fg-color);
+  float: left;
+}
 
-.md-footer-nav { overflow: hidden; padding: 1rem 0; }
+.md-footer-nav__direction {
+  font-size: 0.55rem;
+}
+
+.md-footer-nav__title {
+  font-size: 0.75rem;
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 700;
+}
+
+.md-footer-nav {
+  overflow: hidden;
+  padding: 1rem 0;
+}
 
 /* --- 5. SCROLLBAR & META --- */
-.md-footer-meta { background-color: var(--md-primary-fg-color--dark); }
-.md-copyright { font-size: 0.7rem; color: rgba(255,255,255,0.6); }
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
 
-::-webkit-scrollbar { width: 6px; }
+.md-copyright {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--md-primary-fg-color--transparent);
   border-radius: 10px;
@@ -144,7 +182,7 @@ h1, h2, h3, h4 {
   color: #fff;
   font-size: 1.3rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,6 +191,13 @@ h1, h2, h3, h4 {
 
 #focus-toggle:hover {
   transform: scale(1.1);
+}
+
+/* Hide on mobile/tablet — sidebars already hidden there */
+@media screen and (max-width: 76.1875em) {
+  #focus-toggle {
+    display: none !important;
+  }
 }
 
 /* When focus mode is active, hide both sidebars */
